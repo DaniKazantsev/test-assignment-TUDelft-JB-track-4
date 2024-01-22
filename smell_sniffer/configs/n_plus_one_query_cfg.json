@@ -1,0 +1,5 @@
+{
+    "duration_involved_spans_thrsh" : 10000,
+    "count_involved_spans_thrsh": 5,
+    "name": "[n + 1 query]"
+}

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping
 @Validated
 @FeignClient("randomCoffee")
 fun interface RandomCoffeeApiClient {
+    println("RandomCoffeeApiClient")
     @PostMapping("/api/recommend", consumes = ["application/json"])
     fun suggestCat(@Valid suggestCatForRandomCoffeeRequest: SuggestCatForRandomCoffeeRequest): CatForCoffeeResponse
 }

@@ -17,6 +17,7 @@ services:
       JAVA_TOOL_OPTIONS: "-Xms256M -Xmx10G"
       OTEL_METRICS_EXPORTER: otlp
       OTEL_TRACES_EXPORTER: otlp
+      OTEL_LOGS_EXPORTER: otlp
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel_collector:4317
       OTEL_RESOURCE_ATTRIBUTES: 'service.name=cat-api'
       SPRING_CLOUD_OPENFEIGN_CLIENT_CONFIG_RANDOMCOFFEE_URL: http://cat-recommender-api:8080
@@ -44,6 +45,7 @@ services:
     environment:
       OTEL_METRICS_EXPORTER: otlp
       OTEL_TRACES_EXPORTER: otlp
+      OTEL_LOGS_EXPORTER: otlp
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel_collector:4317
       OTEL_RESOURCE_ATTRIBUTES: 'service.name=cat-recommender-api'
       OTEL_EXPORTER_OTLP_PROTOCOL: grpc
